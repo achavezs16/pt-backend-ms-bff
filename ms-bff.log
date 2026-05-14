@@ -1,0 +1,58 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< cl.pymetrack:ms-bff >-------------------------
+[INFO] Building ms-bff 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.0:run (default-cli) > test-compile @ ms-bff >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-bff ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ ms-bff ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-bff ---
+[INFO] skip non existing resourceDirectory /Users/alvaro/Desktop/ING. INFORMÁTICA/V SEM - 2026/FULLSTACK III/ENCARGO 2/pymetrack-mvp/backend/ms-bff/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ ms-bff ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.2.0:run (default-cli) < test-compile @ ms-bff <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.0:run (default-cli) @ ms-bff ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2026-05-04T22:08:22.647-04:00  INFO 6615 --- [ms-bff] [           main] cl.pymetrack.msbff.MsBffApplication      : Starting MsBffApplication using Java 25.0.2 with PID 6615 (/Users/alvaro/Desktop/ING. INFORMÁTICA/V SEM - 2026/FULLSTACK III/ENCARGO 2/pymetrack-mvp/backend/ms-bff/target/classes started by alvaro in /Users/alvaro/Desktop/ING. INFORMÁTICA/V SEM - 2026/FULLSTACK III/ENCARGO 2/pymetrack-mvp/backend/ms-bff)
+2026-05-04T22:08:22.649-04:00  INFO 6615 --- [ms-bff] [           main] cl.pymetrack.msbff.MsBffApplication      : No active profile set, falling back to 1 default profile: "default"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/alvaro/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-05-04T22:08:23.494-04:00  INFO 6615 --- [ms-bff] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-05-04T22:08:23.500-04:00  INFO 6615 --- [ms-bff] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-04T22:08:23.500-04:00  INFO 6615 --- [ms-bff] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-04T22:08:23.533-04:00  INFO 6615 --- [ms-bff] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-04T22:08:23.534-04:00  INFO 6615 --- [ms-bff] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 859 ms
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by io.netty.util.internal.PlatformDependent0$4 (file:/Users/alvaro/.m2/repository/io/netty/netty-common/4.1.101.Final/netty-common-4.1.101.Final.jar)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$4
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+2026-05-04T22:08:24.262-04:00  INFO 6615 --- [ms-bff] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-05-04T22:08:24.301-04:00  INFO 6615 --- [ms-bff] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path ''
+2026-05-04T22:08:24.313-04:00  INFO 6615 --- [ms-bff] [           main] cl.pymetrack.msbff.MsBffApplication      : Started MsBffApplication in 1.919 seconds (process running for 2.239)
+2026-05-04T22:08:48.241-04:00  INFO 6615 --- [ms-bff] [nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-04T22:08:48.242-04:00  INFO 6615 --- [ms-bff] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-04T22:08:48.245-04:00  INFO 6615 --- [ms-bff] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
