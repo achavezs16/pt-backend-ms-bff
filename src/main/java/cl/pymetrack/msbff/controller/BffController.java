@@ -215,9 +215,9 @@ public class BffController {
             "/api/v1/bff/info"
         ));
         info.put("connectedServices", Map.of(
-            "ms-user", "http://localhost:8085/api/v1",
-            "ms-productos", "http://localhost:8081/api/v1",
-            "ms-pedidos", "http://localhost:8082/api/v1"
+            "ms-user", "Servicio de usuarios y autenticación",
+            "ms-productos", "Servicio de productos e inventario",
+            "ms-pedidos", "Servicio de pedidos y estados"
         ));
         info.put("timestamp", java.time.LocalDateTime.now());
         
