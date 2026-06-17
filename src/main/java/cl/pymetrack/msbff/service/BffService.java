@@ -253,4 +253,20 @@ public class BffService {
         if (value instanceof Number number) return number.doubleValue();
         return Double.parseDouble(value.toString());
     }
+
+    public Mono<Map<String, Object>> getAdminStats(String authorizationHeader) {
+        return Mono.zip(
+                microserviceClient.getAdminStats(authorizationHeader),
+                microserviceClient.getAllPedidos()
+        ).map(tuple -> {
+            Map<String, Object> userStats = tuple.getT1();
+            List<Map<String, Object>> pedidos = tuple.getT2();
+
+            Map<String, Object> result = new HashMap<>(userStats);
+            result.put("totalPedidos", pedidos.size());
+            result.put("ultimaActualizacion", LocalDateTime.now());
+
+            return result;
+        });
+    }
 }
