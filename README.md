@@ -367,3 +367,22 @@ const pedidos = await fetch('/api/v1/bff/pymes/1/pedidos?estado=PENDIENTE');
 const resumen = await fetch('/api/v1/bff/pymes/1/resumen');
 // Retorna solo datos clave: pedidos totales, productos activos, ingresos hoy
 ```
+## 🧪 Aseguramiento de Calidad (QA) y Pruebas Unitarias
+
+Este microservicio cuenta con una suite de pruebas automatizadas diseñadas para garantizar la fiabilidad de la lógica de agregación y la correcta transformación de datos en la capa BFF.
+
+### Herramientas Utilizadas
+- **Framework de Pruebas:** JUnit 5
+- **Mocks y Stubs:** Mockito
+- **Análisis de Cobertura:** JaCoCo Maven Plugin
+
+### Ejecución de Pruebas
+Para ejecutar la suite completa de pruebas unitarias y generar el reporte de métricas, ejecuta el siguiente comando en la raíz del proyecto:
+
+```bash
+mvn clean test jacoco:report
+```
+
+### Reportes y Métricas
+- **Cobertura Actual:** 63% (Superando el Quality Gate institucional mínimo del 60%).
+- **Ubicación del Reporte:** Una vez que el comando finalice con éxito, el reporte HTML detallado se generará localmente en la ruta target/site/jacoco/index.html. Ábrelo en cualquier navegador web para visualizar la cobertura línea por línea.
