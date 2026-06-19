@@ -88,4 +88,30 @@ public class MicroserviceClient {
                 .timeout(Duration.ofSeconds(3))
                 .onErrorReturn(false);
     }
+
+    public Mono<Map<String, Object>> getAdminStats(String authorizationHeader) {
+        logger.debug("Obteniendo estadísticas admin desde ms-user");
+
+        WebClient.RequestHeadersSpec<?> request = webClient.get()
+                .uri(msUserUrl + "/admin/stats");
+
+        if (authorizationHeader != null && !authorizationHeader.isBlank()) {
+            request = request.header("Authorization", authorizationHeader);
+        }
+
+        return request
+                .retrieve()
+                .bodyToMono(new ParameterizedTypeReference<Map<String, Object>>() {})
+                .timeout(Duration.ofSeconds(5));
+    }
+
+    public Mono<List<Map<String, Object>>> getAllPedidos() {
+        logger.debug("Obteniendo todos los pedidos desde ms-pedidos");
+
+        return webClient.get()
+                .uri(msPedidosUrl + "/pedidos")
+                .retrieve()
+                .bodyToMono(new ParameterizedTypeReference<List<Map<String, Object>>>() {})
+                .timeout(Duration.ofSeconds(5));
+    }
 }
