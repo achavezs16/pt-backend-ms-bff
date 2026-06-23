@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk-alpine
+FROM eclipse-temurin:17-jdk
 LABEL maintainer="Caltias - PymeTrack"
 WORKDIR /app
 COPY target/*.jar app.jar
