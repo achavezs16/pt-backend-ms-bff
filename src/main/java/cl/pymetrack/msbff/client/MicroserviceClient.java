@@ -20,13 +20,13 @@ public class MicroserviceClient {
 
     private final WebClient webClient;
 
-    @Value("${services.ms-user:http://localhost:8085/api/v1}")
+    @Value("${services.ms-user:http://172.31.84.36:8085/api/v1}")
     private String msUserUrl;
 
-    @Value("${services.ms-productos:http://localhost:8081/api/v1}")
+    @Value("${services.ms-productos:http://172.31.93.143:8081/api/v1}")
     private String msProductosUrl;
 
-    @Value("${services.ms-pedidos:http://localhost:8082/api/v1}")
+    @Value("${services.ms-pedidos:http://172.31.76.154:8082/api/v1}")
     private String msPedidosUrl;
 
     public MicroserviceClient() {
