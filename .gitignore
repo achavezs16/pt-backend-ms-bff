@@ -1,2 +1,12 @@
-/target
-DS.Store
+<<<<<<< HEAD
+
+=======
+target/
+.idea/
+*.iml
+.vscode/
+.DS_Store
+*.log
+.env
+*.class
+>>>>>>> develop

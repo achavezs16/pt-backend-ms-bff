@@ -31,6 +31,20 @@ public class BffController {
     @Autowired
     private BffService bffService;
 
+    @GetMapping("/admin/stats")
+    public Mono<ResponseEntity<Map<String, Object>>> getAdminStats(
+            @RequestHeader(value = "Authorization", required = false) String authorizationHeader
+    ) {
+        logger.info("Petición de estadísticas globales admin");
+
+        return bffService.getAdminStats(authorizationHeader)
+                .map(ResponseEntity::ok)
+                .onErrorResume(error -> {
+                    logger.error("Error al obtener estadísticas admin: {}", error.getMessage());
+                    return Mono.just(ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).build());
+                });
+    }
+
     @GetMapping("/dashboard/{pymeId}")
     @Operation(summary = "Obtener dashboard completo", description = "Retorna datos agregados del dashboard para una PYME específica")
     @ApiResponses(value = {
@@ -215,9 +229,9 @@ public class BffController {
             "/api/v1/bff/info"
         ));
         info.put("connectedServices", Map.of(
-            "ms-user", "http://localhost:8085/api/v1",
-            "ms-productos", "http://localhost:8081/api/v1",
-            "ms-pedidos", "http://localhost:8082/api/v1"
+            "ms-user", "Servicio de usuarios y autenticación",
+            "ms-productos", "Servicio de productos e inventario",
+            "ms-pedidos", "Servicio de pedidos y estados"
         ));
         info.put("timestamp", java.time.LocalDateTime.now());
         

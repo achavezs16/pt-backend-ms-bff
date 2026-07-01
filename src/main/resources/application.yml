@@ -27,9 +27,9 @@ management:
       show-details: always
 
 services:
-  ms-user: http://localhost:8085/api/v1
-  ms-productos: http://localhost:8081/api/v1
-  ms-pedidos: http://localhost:8082/api/v1
+  ms-user: http://172.31.28.5:8085/api/v1
+  ms-productos: http://172.31.79.177:8081/api/v1
+  ms-pedidos: http://172.31.80.225:8082/api/v1
 
 app:
   bff:
